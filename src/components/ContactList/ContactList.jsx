@@ -1,7 +1,5 @@
 import React from 'react';
 import { string, arrayOf, exact } from 'prop-types';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
-
 
 import ContactListItem from "../ContactListItems/ContactListItemsContainer";
 // redux
@@ -16,14 +14,11 @@ import styles from '../ContactList/ContactList.module.scss';
 const ContactList = ({ contacts }) => {
 
   return (
-
-    <TransitionGroup component="ul" className={styles.ContactList}>
+    <ul className={styles.ContactList}>
       {contacts.map(({ id }) => (
-        <CSSTransition key={id} timeout={250} classNames={styles.TaskListIitemFade}>
-          <ContactListItem key={id} id={id} />
-        </CSSTransition>
+        <ContactListItem key={id} id={id} />
       ))}
-    </TransitionGroup>
+    </ul>
   );
 };
 

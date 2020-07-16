@@ -8,18 +8,19 @@ import ThemeToggler from '../ThemeToggler';
 
 const UserMenu = ({ avatar, name, email, onLogout }) => (
   <>
-    <ThemeToggler />
+
     <div className={styles.container}>
       <div className={styles.containerAvatar}>
         <img src={avatar} alt=" " width="32" className={styles.avatar} />
-        <span className={styles.name}>Welcome, {name}</span>
+        {/* <span className={styles.name}>Welcome,</span> */}
       </div>
       <span className={styles.email}> {email}</span>
-      <div className={styles.Logout}>
-        <button className={styles.button} type="submit" onClick={onLogout}>
-          Logout
+      {/* <div className={styles.logout}> */}
+      <ThemeToggler />
+      <button className={styles.button} type="submit" onClick={onLogout}>
+        Logout
         </button>
-      </div>
+      {/* </div> */}
     </div>
   </>
 );

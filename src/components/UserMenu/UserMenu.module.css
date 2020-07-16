@@ -1,39 +1,39 @@
 .container {
   display: flex;
-  flex: 0 0 35%;
+  /* flex: 0 0 50%; */
   align-items: center;
   align-content: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .avatar {
   display: flex;
   flex: 0 0 20px;
-  margin-right: 4px;
+  margin-right: 6px;
 }
 
 .containerAvatar {
-  display: flex;
-  flex-wrap: nowrap;
+  /* display: flex;
+  flex-wrap: nowrap; */
 }
 
 .name,
 .email {
   display: flex;
   font-weight: 700;
-  margin-right: 12;
+  margin-right: 10px;
   align-items: center;
   justify-content: space-between;
 }
 
 .email {
-  margin-left: 2rem;
+  /* margin-left: 2rem; */
 }
 
-.Logout {
+.logout {
   display: flex;
-  height: 40px;
+  /* height: 40px; */
   align-items: center;
   justify-content: center;
 
@@ -47,7 +47,7 @@
   background-color: #1976d2;
   border: 0;
   outline: 0;
-  padding: 4px 24px;
+  padding: 3px 3px;
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.05);
@@ -55,6 +55,7 @@
   text-transform: uppercase;
   user-select: none;
   transition: background-color 200ms ease-in-out;
+  margin-left: 10px;
 }
 
 .button:hover {
