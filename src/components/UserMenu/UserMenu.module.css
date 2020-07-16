@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  flex: 0 0 35%;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.avatar {
+  display: flex;
+  flex: 0 0 20px;
+  margin-right: 4px;
+}
+
+.containerAvatar {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.name,
+.email {
+  display: flex;
+  font-weight: 700;
+  margin-right: 12;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.email {
+  margin-left: 2rem;
+}
+
+.Logout {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #1976d2;
+  border: 0;
+  outline: 0;
+  padding: 4px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.05);
+  font: inherit;
+  text-transform: uppercase;
+  user-select: none;
+  transition: background-color 200ms ease-in-out;
+}
+
+.button:hover {
+  box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.15);
+  background-color: rgb(17, 82, 147);
+}

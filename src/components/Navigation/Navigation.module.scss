@@ -1,0 +1,23 @@
+.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: 700;
+  color: #2A363B;
+
+
+  &.light {
+    background-color: #fff;
+    color: #2A363B;
+  }
+
+  &.dark {
+    background-color: #333333;
+    color: #fff;
+  }
+
+}
+
+.activeLink {
+  color: #E84A5F;
+}
