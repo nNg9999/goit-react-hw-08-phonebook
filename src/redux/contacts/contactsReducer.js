@@ -15,19 +15,19 @@ const addContacts = (state, { payload }) => {
   return [...state, payload]
 };
 
-const removeContact = (state, action) => {
-  return state.filter(({ id }) => id !== action.payload)
+const removeContact = (state, { payload }) => {
+  return state.filter(({ id }) => id !== payload)
 };
 
 
 const items = createReducer(initialState.items, {
-  [contactsActions.fetchContactsSuccess]: (_, action) => action.payload,
+  [contactsActions.fetchContactsSuccess]: (_, { payload }) => payload,
   [contactsActions.addContactsSuccess]: addContacts,
   [contactsActions.removeContactsSuccess]: removeContact,
 })
 
 const filter = createReducer('', {
-  [contactsActions.changeFilter]: (state, action) => action.payload,
+  [contactsActions.changeFilter]: (state, { payload }) => payload,
 })
 
 const loading = createReducer(false, {

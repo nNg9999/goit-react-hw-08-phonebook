@@ -10,22 +10,13 @@ import { themeSelector } from '../../../redux/theme';
 // styles
 import styles from "./Layout.module.scss";
 
-// const styles = {
-//   container: {
-//     width: '80vw',
-//     marginLeft: 'auto',
-//     marginRight: 'auto',
-//     padding: '0 24px',
-//   },
-// };
-
 function Layout(props) {
-  const { children, isChecked } = props;
+  const { children, theme } = props;
 
   return (
     <div
       className={`${styles.container} ${
-        isChecked.isChecked ? styles.dark : styles.light
+        theme.themeConfig === "dark" ? styles.dark : styles.ligth
         }`}
     >
       <AppBar />
@@ -36,14 +27,11 @@ function Layout(props) {
 
 Layout.propTypes = {
   children: PropTypes.node,
-  isChecked: PropTypes.object.isRequired
-
 };
 
 const mapStateToProps = state => {
   return {
     theme: themeSelector.getThemeConfig(state),
-    isChecked: themeSelector.getIsChecked(state),
   };
 };
 

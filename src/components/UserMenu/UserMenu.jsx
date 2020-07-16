@@ -12,15 +12,13 @@ const UserMenu = ({ avatar, name, email, onLogout }) => (
     <div className={styles.container}>
       <div className={styles.containerAvatar}>
         <img src={avatar} alt=" " width="32" className={styles.avatar} />
-        {/* <span className={styles.name}>Welcome,</span> */}
       </div>
       <span className={styles.email}> {email}</span>
-      {/* <div className={styles.logout}> */}
+
       <ThemeToggler />
       <button className={styles.button} type="submit" onClick={onLogout}>
         Logout
         </button>
-      {/* </div> */}
     </div>
   </>
 );

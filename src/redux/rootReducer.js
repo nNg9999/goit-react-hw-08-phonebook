@@ -1,9 +1,9 @@
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
+import themeReducer from './theme/themeReducer';
 import authReducer from './auth/authReducer';
 import contactsReducer from './contacts/contactsReducer';
-import themeReducer from './theme/themeReducer';
 
 
 const authPersistConfig = {

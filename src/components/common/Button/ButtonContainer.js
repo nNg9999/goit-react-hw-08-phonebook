@@ -8,9 +8,9 @@ import Button from "./Button";
 class ButtonContainer extends Component {
 
   render() {
-    // const button = `${css.button} ${
-    //   isChecked ? css.button_dark : css.button_light
-    //   }`
+    const button = `${css.button} ${
+      isChecked ? css.button_dark : css.button_light
+      }`
 
     return (
       <Button

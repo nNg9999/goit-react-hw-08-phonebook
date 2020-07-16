@@ -1,6 +1,6 @@
 import { createReducer, combineReducers } from '@reduxjs/toolkit';
 
-import themeActions from './themeAction';
+import themeActions from './themeActions';
 
 const toggleTheme = (state) => {
   return {
@@ -16,7 +16,7 @@ const toggleChecked = (state) => {
   }
 }
 
-const themeConfig = createReducer({ themeConfig: "ligth" }, {
+const themeConfig = createReducer({ themeConfig: "ligth", }, {
   [themeActions.toggleTheme]: toggleTheme,
 })
 

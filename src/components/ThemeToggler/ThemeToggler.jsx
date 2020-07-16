@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import { connect } from 'react-redux';
-import { themeAction, themeSelector } from '../../redux/theme';
+import { themeActions, themeSelector } from '../../redux/theme';
 
 
 // styles
@@ -88,7 +88,7 @@ const mapStateToprops = (state) => ({
 
 
 const mapDispatchToprops = {
-  onToggleTheme: themeAction.toggleTheme,
+  onToggleTheme: themeActions.toggleTheme,
 };
 
 export default connect(mapStateToprops, mapDispatchToprops)(ThemeToggler);

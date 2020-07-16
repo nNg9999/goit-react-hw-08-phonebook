@@ -1,22 +1,21 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { authSelectors } from '../../redux/auth';
 import { themeSelector } from '../../redux/theme';
 // import withAuth from '../../hoc/withAuth';
-import routes from '../../routes';
+// import routes from '../../routes';
 
 import styles from './Navigation.module.scss';
 
-
 const Navigation = ({ isAuthenticated, isChecked }) => {
   const color = `${styles.link} ${
-    isChecked ? styles.link.dark : styles.link.light
+    isChecked.isChecked ? styles.linkdark : styles.linklight
     }`
   return (
     <nav>
 
-      {
+      {/* {
         routes.map(route => (
           <Fragment key={route.label} >
             {
@@ -32,12 +31,12 @@ const Navigation = ({ isAuthenticated, isChecked }) => {
             }
           </Fragment>
         ))
-      }
+      } */}
 
-      {/* <NavLink
+      <NavLink
         to="/"
         exact
-        className={styles.link}
+        className={color}
         activeClassName={styles.activeLink}>
         Home
     </NavLink>
@@ -47,13 +46,13 @@ const Navigation = ({ isAuthenticated, isChecked }) => {
           <NavLink
             to="/contacts"
             exact
-            className={styles.link}
+            className={color}
             activeClassName={styles.activeLink}
           >
             Contacts
           </NavLink>
         )
-      } */}
+      }
 
     </nav >
   )
